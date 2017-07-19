@@ -6,17 +6,19 @@ help:
 	@echo
 	@echo " * wordcount: count words - uses pandoc"
 	@echo " * install: set the builder environment up."
-	@echo " * html: build the html page in docs/"
+	@echo " * html: build the html pages in docs/"
 	@echo " * serve: serve the docs/ directory"
 
 install:
-	virtualenv venv
+	virtualenv --python=python3.6 venv
 	$(VENV_BIN)/pip install markdown
 
-wordcount: stones.md
-	@pandoc -f markdown -t plain stones.md | wc -w
+wordcount: v1/stones.md v2/stones.md
+	@echo "stones-v1" `pandoc -f markdown -t plain v1/stones.md | wc -w`
+	@echo "stones-v2" `pandoc -f markdown -t plain v2/stones.md | wc -w`
 
-html: stones.md templates/base.html
+html: v1/stones.md v2/stones.md templates/base.html
+	mkdir -p docs/v2/ docs/v1
 	$(VENV_BIN)/python scripts/build.py
 
 serve:
