@@ -1,5 +1,7 @@
 # stones
 
+**stones** is a tabletop roleplaying game about hunters in prehistoric times. It uses only four-sided dice (named "stones") for its resolution mechanics.
+
 **stones** started as a 200-word RPG, [written for the 2017 challenge](https://200wordrpg.github.io/), organised by [David Schirduan](https://technicalgrimoire.com/) and [Marshall Miller](http://www.finemessgames.com/).
 
 Since I was quite satisfied by the [version submitted for the contest](https://200wordrpg.github.io/2017/rpg/2017/04/22/Stones.html), I felt I had to try to expand it a bit. This impression was confirmed by the review made by this [Australian blogger named Ivan](http://roleplaygreenroom.blogspot.fr/2017/05/200-word-rpg-challenge-2017-reviews_14.html). I quote:
