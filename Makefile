@@ -1,3 +1,6 @@
+VENV=./venv
+VENV_BIN=$(VENV)/bin
+
 help:
 	@echo "Help on Makefile"
 	@echo
@@ -7,10 +10,10 @@ help:
 
 install:
 	virtualenv venv
-	venv/bin/pip install markdown
+	$(VENV_BIN)/pip install markdown
 
 wordcount: stones.md
 	@pandoc -f markdown -t plain stones.md | wc -w
 
 html: stones.md templates/base.html
-	venv/bin/python scripts/build.py
+	$(VENV_BIN)/python scripts/build.py
