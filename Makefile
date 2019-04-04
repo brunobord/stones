@@ -7,6 +7,7 @@ help:
 	@echo " * wordcount: count words - uses pandoc"
 	@echo " * install: set the builder environment up."
 	@echo " * html: build the html page in docs/"
+	@echo " * serve: serve the docs/ directory"
 
 install:
 	virtualenv venv
@@ -17,3 +18,6 @@ wordcount: stones.md
 
 html: stones.md templates/base.html
 	$(VENV_BIN)/python scripts/build.py
+
+serve:
+	cd docs; ../$(VENV_BIN)/python -m http.server
