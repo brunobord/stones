@@ -10,7 +10,7 @@ help:
 	@echo " * serve: serve the docs/ directory"
 
 install:
-	virtualenv --python=python3.6 venv
+	virtualenv --python=python3.8 venv
 	$(VENV_BIN)/pip install markdown
 
 wordcount: v1/stones.md v2/stones.md
